@@ -1,0 +1,27 @@
+{
+    "name": "Image Development",
+    "id": "imagedev",
+    "version": "0.1.0",
+    "description": "Tooling for embedded Linux image development.",
+    "options": {
+        "build_tools_repo": {
+            "type": "string",
+            "proposals": [
+                "https://github.com/GreyBeagleLinux/build_tools"
+            ],
+            "default": "https://github.com/GreyBeagleLinux/build_tools",
+            "description": "Select the repository which provides the build tools."
+        },
+        "build_tools_version": {
+            "type": "string",
+            "proposals": [
+                "main"
+            ],
+            "default": "main",
+            "description": "Branch or tag of the build tools."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
