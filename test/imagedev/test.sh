@@ -13,8 +13,10 @@ check "check sudo" bash -c "sudo echo 'Hello from root'"
 
 check "check build" bash -c "ls -lah /build"
 check "check venv" bash -c "ls -lah /build/venv"
-check "check tools" bash -c "ls -lah /build/tools"
-check "check build tools" bash -c "test -d /build/tools/build_tools"
+check "check build tools" bash -c "test -d /build/build_tools"
+check "check root_generator command" bash -c "source /build/venv/bin/activate; root_generator -h"
+check "check embdgen" bash -c "test -d /build/embdgen"
+check "check embdgen command" bash -c "source /build/venv/bin/activate; embdgen -h"
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.

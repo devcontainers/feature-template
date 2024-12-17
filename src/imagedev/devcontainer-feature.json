@@ -1,7 +1,7 @@
 {
     "name": "Image Development",
     "id": "imagedev",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Tooling for embedded Linux image development.",
     "options": {
         "build_tools_repo": {
@@ -19,8 +19,30 @@
             ],
             "default": "main",
             "description": "Branch or tag of the build tools."
+        },
+        "embdgen_repo": {
+            "type": "string",
+            "proposals": [
+                "https://github.com/GreyBeagleLinux/embdgen"
+            ],
+            "default": "https://github.com/GreyBeagleLinux/embdgen",
+            "description": "Select the repository which provides embdgen."
+        },
+        "embdgen_version": {
+            "type": "string",
+            "proposals": [
+                "master"
+            ],
+            "default": "master",
+            "description": "Branch or tag of embdgen."
         }
     },
+    // Run container in privileged mode to e.g. allow mount operations.
+	"privileged": true,
+    // Bind-mounting /dev is required to make new loop devices accessbile in the container.
+	"mounts": [
+		"type=bind,source=/dev,target=/dev"
+	],
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]
