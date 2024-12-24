@@ -1,12 +1,8 @@
 {
-    "color_and_hello": {
+    "sqlfmt_and": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "color": {
-                "favorite": "purple"
-            },
-            "hello": {
-                "greeting": "Greetings"
+            "sqlfmt": {
             }
         }
     }
