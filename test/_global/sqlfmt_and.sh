@@ -16,16 +16,13 @@ set -e
 # Optional: Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
 
-echo -e "The result of the 'color' command will be:\n"
-color
-echo -e "The result of the 'hello' command will be:\n"
-hello
+echo -e "The result of the 'sqlfmt' command will be:\n"
+sqlfmt --help
 echo -e "\n"
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check purple is my favorite color" bash -c "color | grep 'my favorite color is purple'"
-check "check I am greeting with 'Greetings'" bash -c "hello | grep 'Greetings, $(whoami)'"
+check "sqlfmt --help" sqlfmt --help
 
 
 # Report result
