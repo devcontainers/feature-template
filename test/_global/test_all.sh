@@ -16,15 +16,12 @@ set -e
 # Optional: Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
 
-echo -e "The result of the 'sqlfmt' command will be:\n"
-sqlfmt --help
-echo -e "\n"
-
 # Feature-specific tests
-# The 'check' command comes from the dev-container-features-test-lib.
-check "sqlfmt --help" sqlfmt --help
+# The 'check' command comes from the dev-container-features-test-lib. Syntax is...
+# check <LABEL> <cmd> [args...]
+check "sqlfmt --version" sqlfmt --version
 
 
-# Report result
+# Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
 reportResults
