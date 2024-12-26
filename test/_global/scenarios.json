@@ -1,5 +1,5 @@
 {
-    "sqlfmt_and": {
+    "test_all": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "sqlfmt": {

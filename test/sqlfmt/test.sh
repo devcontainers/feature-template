@@ -11,7 +11,7 @@ source dev-container-features-test-lib
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
-check "sqlfmt --help" sqlfmt --help
+check "sqlfmt --version" sqlfmt --version
 
 
 # Report results
