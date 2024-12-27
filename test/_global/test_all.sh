@@ -20,7 +20,7 @@ source dev-container-features-test-lib
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
 check "sqlfmt --version" sqlfmt --version
-
+check "recce version" recce version
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.

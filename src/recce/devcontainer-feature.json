@@ -1,0 +1,21 @@
+{
+    "id": "recce",
+    "name": "Recce (via pipx)",
+    "version": "0.0.1",
+    "description": "The data-validation toolkit for enhanced dbt (data build tool) PR review",
+    "options": {
+        "version": {
+            "default": "v0.47.0",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers-extra/features/pipx-package",
+        "ghcr.io/devcontainers/features/python",
+        "ghcr.io/devcontainers/features/git:1"
+    ]
+}
