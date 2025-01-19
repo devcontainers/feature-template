@@ -43,5 +43,5 @@ jobs:
           # Push
           if [ "$NO_UPDATES" != "true" ] ; then
               git push origin "$branch"
-              gh pr create --title "$message" --body "$message"
+              gh pr create --title "$message" --body "$message" --head "$branch"
           fi
